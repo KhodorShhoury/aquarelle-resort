@@ -1,0 +1,93 @@
+@import '../../helpers/variables.scss';
+
+.rooms {
+    padding-top: $mainPaddingTop;
+    padding-bottom: $mainPaddingBottom;
+
+    .container {
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+
+            .box {
+                background-color: $main-cream-color;
+                border-radius: $main-border-radius;
+                overflow: hidden;
+
+                .image {
+                    position: relative;
+
+                    .swiper-button-prev,
+                    .swiper-button-next {
+                        color: white;
+
+                    }
+
+                    img {
+                        max-width: 100%;
+                    }
+
+                }
+
+                .content {
+                    padding: 15px;
+
+                    .name {
+                        text-align: center;
+                        text-transform: uppercase;
+                        margin-bottom: 25px;
+                        font-weight: 500;
+                        font-size: 20px;
+                    }
+
+                    ul {
+                        text-align: center;
+
+                        li {
+                            position: relative;
+                            margin-bottom: 25px;
+                            color: $main-paragraph-color;
+                            font-size: 13px;
+
+                            &:not(:last-child) {
+                                &::after {
+                                    content: "";
+                                    width: 70%;
+                                    height: 1px;
+                                    position: absolute;
+                                    bottom: -10px;
+                                    background-color: $main-paragraph-color;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+
+                            svg {
+                                font-size: 14px;
+                                margin-left: 5px;
+
+                                &.fa-check {
+                                    color: $main-cyan-color;
+
+                                }
+
+                                &.fa-minus {
+                                    color: gray;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+
+                    .price {
+                        font-size: 24px;
+                        font-weight: 700;
+                        display: block;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

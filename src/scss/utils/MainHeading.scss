@@ -1,0 +1,17 @@
+@import '../helpers/mixins';
+@import '../helpers/variables.scss';
+
+.main-heading {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    margin: 0 auto 80px;
+
+    h3 {
+        font-size: 32px;
+        color: $main-cyan-color;
+        font-family: $primary-font;
+        text-transform: uppercase;
+    }
+
+}

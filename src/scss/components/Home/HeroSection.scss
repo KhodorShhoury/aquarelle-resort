@@ -1,0 +1,165 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins';
+
+.landing {
+    position: relative;
+
+    .logo {
+        position: absolute;
+        height: 100%;
+
+        .logoDesktop {
+            height: 100%;
+            width: 100%;
+            display: none;
+
+            @media(min-width: 992px) {
+                display: block;
+            }
+
+            @media(max-width:1199px) {
+                width: 90%;
+            }
+        }
+
+        .logoMobile {
+            display: none;
+
+            @media(max-width: 991px) {
+                display: block;
+                width: 530px;
+            }
+
+            @media(max-width: 767px) {
+                display: block;
+                width: 400px;
+            }
+        }
+
+        @media(max-width: 991px) {
+            top: -200px;
+            left: -200px;
+        }
+
+        @media(max-width: 767px) {
+            top: -150px;
+            left: -190px;
+        }
+
+
+    }
+
+    .overlay {
+        @include overlay(black, .5);
+    }
+
+    .assets {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        img,
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .container {
+        height: 100%;
+        position: relative;
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 50%;
+
+            @media (max-width:991px) {
+                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .text {
+                text-align: start;
+                padding: 0px 30px;
+
+                h1 {
+                    font-family: $primary-font;
+                    color: $main-cream-color;
+                    font-size: 25px;
+                    letter-spacing: 3px;
+                    line-height: 1;
+                    font-weight: 500;
+
+                    @media(max-width:767px) {
+                        font-size: 40px;
+                    }
+
+                    @media(max-width:1199px) {
+                        font-size: 40px;
+                    }
+
+                    @media(max-width:991px) {
+                        font-size: 30px;
+                    }
+
+                    span {
+                        color: $main-cyan-color;
+                        font-size: 42px;
+                        letter-spacing: 2px;
+                        display: block;
+                    }
+                }
+
+                p {
+                    color: $main-cream-color;
+                    font-weight: 500;
+                    font-size: 16px;
+                    margin-top: 15px;
+                    max-width: 400px;
+                    margin: 20px auto;
+                    font-family: $secondary-font;
+                    line-height: 1.2;
+
+                    @media(max-width:767px) {
+                        font-size: 12px;
+                        max-width: 85%;
+                    }
+
+                    @media(max-width:500px) {
+                        font-size: 12px;
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .play-video {
+                @include circle(50px);
+                @include contentCenterer();
+                background-color: $main-cyan-color;
+                color: white;
+                cursor: pointer;
+            }
+
+        }
+
+        .address {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

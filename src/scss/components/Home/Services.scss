@@ -1,0 +1,67 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.services {
+    padding-top: $mainPaddingTop;
+    padding-bottom: $mainPaddingBottom;
+
+    .container {
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+
+            .box {
+                border-radius: $main-border-radius;
+                overflow: hidden;
+                background-color: $main-cream-color;
+
+                .image {
+                    position: relative;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .content {
+                    padding: 15px;
+
+                    h3 {
+                        color: $main-cyan-color;
+                        font-family: $primary-font;
+                        text-align: center;
+                        font-size: 28px;
+                    }
+
+                    .icon {
+                        text-align: center;
+                        margin: 10px 0px;
+
+                        svg {
+                            color: $main-cyan-color;
+                        }
+                    }
+
+
+                    p {
+                        color: $main-paragraph-color;
+                        text-align: center;
+                        font-size: 13px;
+                    }
+                }
+
+                a {
+                    display: block;
+                    text-align: center;
+                    color: $main-cyan-color;
+                    text-decoration: underline;
+                    font-weight: 700;
+                    font-size: 18px;
+                    margin-top: 5px;
+                }
+            }
+
+        }
+    }
+}

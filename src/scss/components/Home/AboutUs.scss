@@ -1,0 +1,53 @@
+@import '../../helpers/variables.scss';
+@import '../../helpers/mixins.scss';
+
+.about-us {
+    padding-top: $mainPaddingTop;
+    padding-bottom: $mainPaddingBottom;
+
+    .container {
+        .content {
+            text-align: center;
+
+            .main-heading {
+                margin-bottom: 5px;
+            }
+
+            .title {
+                margin: 5px 0px 15px;
+                font-size: 60px;
+                font-family: $primary-font;
+            }
+
+            .desc {
+                max-width: 500px;
+                margin: 50px auto;
+                color: $main-paragraph-color;
+            }
+        }
+
+        .video-intro {
+            max-width: 750px;
+            position: relative;
+            margin: 90px auto 0px;
+
+            video {
+                max-width: 100%;
+                border-radius: $main-border-radius;
+                box-shadow : $mainBoxShadow;
+            }
+
+            .play-button {
+                @include centerer();
+                font-size: 35px;
+                color: $main-cyan-color;
+                transition-duration: $main-transition-duration;
+                opacity: 0;
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

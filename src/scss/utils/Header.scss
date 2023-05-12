@@ -1,0 +1,84 @@
+@import '../helpers/variables.scss';
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    .container {
+        display: flex;
+        align-items: center;
+        min-height: 92px;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width:767px) {
+                margin-top: 7px;
+            }
+
+            img {
+                height: 92px;
+            }
+        }
+
+        .main-nav {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+
+                &>li {
+                    &>a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 102px;
+                        position: relative;
+                        color: white;
+                        padding: 0 30px;
+                        font-size: 18px;
+                        font-weight: 500;
+                        font-family: $primary-font;
+
+                        @media(max-width:991px) {
+                            padding: 0 15px;
+                        }
+                    }
+                }
+
+                @media(max-width : 991px) {
+                    flex-direction: column;
+                    position: absolute;
+                    left: 0%;
+                    top: -100vh;
+                    backdrop-filter: blur(8px);
+                    width: 100%;
+                    transition-duration: $main-transition-duration;
+                    height: 100vh;
+
+                    &.active {
+                        top: 0;
+                    }
+                }
+            }
+
+            .menu-toggle {
+                color: white;
+                font-size: 28px;
+                display: none;
+                position: relative;
+                z-index: 1;
+
+                @media (max-width:991px) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

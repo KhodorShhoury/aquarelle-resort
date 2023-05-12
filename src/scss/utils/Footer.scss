@@ -1,0 +1,46 @@
+@import '../helpers/variables.scss';
+@import '../helpers/mixins.scss';
+
+.footer {
+    background-color: #191919;
+    padding: 70px 0 70px;
+
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+
+    .container {
+        .title {
+            text-align: center;
+            font-size: 42px;
+            color: $main-cream-color;
+
+            span {
+                color: $main-cyan-color;
+            }
+        }
+
+        .desc {
+            color: $main-paragraph-color;
+            text-align: center;
+            margin: 15px 0px;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+
+            .icon {
+                margin: 0px 5px;
+                @include circle(55px);
+                background-color: $main-cyan-color;
+                @include contentCenterer();
+
+                a {
+                    color: white;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
