@@ -1,10 +1,10 @@
 import React from 'react'
 import MainHeading from '../utils/MainHeading'
-import drone4 from '../../assets/drone.jpeg'
-import roomsImage from '../../assets/rooms.JPG'
-import viewImage from '../../assets//view.JPG'
-import blueRoom from "../../assets/DroneGreen.jpg"
-import yellowDoor from "../../assets/yellow-door.JPG"
+import Gallery1 from '../../assets/gallery1.jpg'
+import Gallery2 from '../../assets/gallery2.jpg'
+import gallery3 from '../../assets//view.JPG'
+import gallery4 from "../../assets/gallery3.JPG"
+import gallery5 from "../../assets/yellow-door.JPG"
 import '../../scss/components/Home/Gallery.scss';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -17,7 +17,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 function Gallery() {
       return (
-            <div id='gallery' className='gallery'>
+            <section id='gallery' className='section gallery'>
                   <MainHeading title="gallery" />
                   <div className="container">
                         <div className="images">
@@ -41,15 +41,15 @@ function Gallery() {
                                     modules={[Pagination]}
                                     className="mySwiper"
                               >
-                                    <SwiperSlide><img src={drone4} alt="" /></SwiperSlide>
-                                    <SwiperSlide><img src={roomsImage} alt="" /></SwiperSlide>
-                                    <SwiperSlide><img src={yellowDoor} alt="" /></SwiperSlide>
-                                    <SwiperSlide><img src={blueRoom} alt="" /></SwiperSlide>
-                                    <SwiperSlide><img src={viewImage} alt="" /></SwiperSlide>
+                                    <SwiperSlide><img src={Gallery1} alt="" /></SwiperSlide>
+                                    <SwiperSlide><img src={Gallery2} alt="" /></SwiperSlide>
+                                    <SwiperSlide><img src={gallery3} alt="" /></SwiperSlide>
+                                    <SwiperSlide><img src={gallery4} alt="" /></SwiperSlide>
+                                    <SwiperSlide><img src={gallery5} alt="" /></SwiperSlide>
                               </Swiper>
                         </div>
                   </div>
-            </div>
+            </section>
       )
 }
 

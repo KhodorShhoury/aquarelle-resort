@@ -24,10 +24,10 @@ function AboutUs() {
     }
   }
   return (
-    <div id='about' className='about-us'>
+    <section id='about'  className='about-us'>
       <div className="container">
         <div className="content">
-          <MainHeading title="about us" />
+          <MainHeading title="about us" id = "about"/>
           <h2 className='title'>A best place to enjoy your life</h2>
           <p className='desc'>Located in the heart of South Lebanon, AQUARELLE hugs the valley and offers stunning natural views, fresh air, and the tranquil sounds of chirping birds. It's the perfect place to unwind and enjoy your own mindful relaxation, calmness, and meditation.</p>
         </div>
@@ -36,7 +36,7 @@ function AboutUs() {
           <div className= {`play-button ${isShown ? 'active' : ''}`} onClick={handleVideoPlayer} ref={playButton} ><FontAwesomeIcon icon={isPlay ? faPause : faPlay}/></div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

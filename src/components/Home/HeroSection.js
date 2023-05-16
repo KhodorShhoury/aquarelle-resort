@@ -1,12 +1,12 @@
 import React from 'react';
-import drone1 from '../../assets/Drone1.JPG';
+import drone1 from '../../assets/DroneHome.jpg';
 import '../../scss/components/Home/HeroSection.scss';
 import logoDesktop from '../../assets/HeroSectionLogo.png';
 import logoMobile from '../../assets/Group 154.png';
 
 function HeroSection() {
   return (
-    <div id='#' className='landing' style={{ height: window.innerHeight }}>
+    <section id='home' className='home landing' style={{ height: window.innerHeight }}>
         <div className="overlay"></div>
       <div className="assets">
         <img src={drone1} alt="" />
@@ -29,7 +29,7 @@ function HeroSection() {
         </div>
         </div>
        
-    </div>
+    </section>
   )
 }
 

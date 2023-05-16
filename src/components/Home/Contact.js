@@ -6,7 +6,7 @@ import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons';
 function Contact() {
     return (
-        <div id='contact' className='contact'>
+        <section id='contact' className='contact'>
             <MainHeading title="connect with us" />
             <div className="container">
                 <div className="find-us">
@@ -22,7 +22,7 @@ function Contact() {
                 </div>
             </div>
 
-        </div>
+        </section>
     )
 }
 

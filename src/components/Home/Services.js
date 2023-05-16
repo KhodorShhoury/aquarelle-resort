@@ -3,27 +3,32 @@ import '../../scss/components/Home/Services.scss';
 import MainHeading from '../utils/MainHeading';
 import gymImage from '../../assets/Gym.JPG';
 import restoImage from '../../assets/Resto.JPG';
-import eventsImage from '../../assets/events.JPG';
+import eventsImage from '../../assets/events.jpg';
 import "swiper/css";
 import "swiper/css/pagination";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiamond } from '@fortawesome/free-solid-svg-icons';
+import Service from './Service';
 function Services() {
     return (
-        <div id='services' className="services">
+        <section id='services' className="services">
             <MainHeading title="Services" />
             <div className="container">
                 <div className="boxes">
+                {/* <Service title="Events"
+                    image={gymImage}
+                        description= "Make your special day unforgettable with our resort's events services! We offer a stunning and serene location for weddings and events of all kinds.  Our experienced team is dedicated to making your event truly spectacular."
+                /> */}
                     <div className="box">
                         <div className="image">
-                            <img src={gymImage} alt="" />
+                            <img src={eventsImage} alt="" />
                         </div>
                         <div className="content">
                             <h3>Events</h3>
                             <div className="icon">
                                 <FontAwesomeIcon icon={faDiamond} />
                             </div>
-                            <p>Make your special day unforgettable with our resort's events services! We offer a stunning and serene location for weddings and events of all kinds.  Our experienced team is dedicated to making your event truly spectacular.</p>
+                            <p>Our restaurant is open for breakfast, lunch, and dinner, and we offer a wide range of cuisine styles to choose from. From local favorites to international dishes, we have something for everyone</p>
                         </div>
                     </div>
                     <div className="box">
@@ -40,7 +45,7 @@ function Services() {
                     </div>
                     <div className="box">
                         <div className="image">
-                            <img src={eventsImage} alt="" />
+                            <img src={gymImage} alt="" />
                         </div>
                         <div className="content">
                             <h3>Gym</h3>
@@ -53,7 +58,7 @@ function Services() {
                 </div>
 
             </div>
-        </div>
+        </section>
     )
 }
 

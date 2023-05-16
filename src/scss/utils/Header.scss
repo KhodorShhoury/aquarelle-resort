@@ -1,9 +1,29 @@
 @import '../helpers/variables.scss';
+
 .header {
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 999;
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        background-color: white;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        transition-duration: $main-transition-duration;
+        
+        a {
+            color: black !important;
+        }
+
+        .menu-toggle {
+            color: black !important;
+        }
+    }
 
     .container {
         display: flex;
@@ -34,6 +54,13 @@
                 align-items: center;
 
                 &>li {
+                    &.active {
+                        a {
+                            color: $main-cyan-color !important;
+                        }
+
+                    }
+
                     &>a {
                         display: flex;
                         justify-content: center;
@@ -49,6 +76,7 @@
                         @media(max-width:991px) {
                             padding: 0 15px;
                         }
+
                     }
                 }
 
@@ -57,13 +85,19 @@
                     position: absolute;
                     left: 0%;
                     top: -100vh;
-                    backdrop-filter: blur(8px);
+                    background-color: white;
                     width: 100%;
                     transition-duration: $main-transition-duration;
-                    height: 100vh;
-
+                    border-bottom: 6px solid $main-cyan-color;
+                    z-index: -1;
+                    padding-top: 92px;
                     &.active {
                         top: 0;
+                    }
+
+                    a {
+                        height: 62px !important;
+                        color: black !important;
                     }
                 }
             }

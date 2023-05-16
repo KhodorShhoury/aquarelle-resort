@@ -18,10 +18,8 @@ function Footer() {
 
           </div>
           <div className="icon">
-            <a href="#"><FontAwesomeIcon icon={faTiktok} /></a>
-
+            <a href="https://www.tiktok.com/@aquarelleresort?_t=8cN4vlVosd8&_r=1"><FontAwesomeIcon icon={faTiktok} /></a>
           </div>
-
         </div>
       </div>
     </div>
