@@ -3,7 +3,7 @@
 
 .footer {
     background-color: #191919;
-    padding: 70px 0 70px;
+    padding: 70px 0 10px;
 
     @media (max-width: 767px) {
         text-align: center;
@@ -29,7 +29,7 @@
         .social {
             display: flex;
             justify-content: center;
-
+            margin: 15px 0px;
             .icon {
                 margin: 0px 5px;
                 @include circle(55px);
@@ -40,6 +40,14 @@
                     color: white;
                     font-size: 20px;
                 }
+            }
+        }
+        .made-by{
+            text-align: center;
+            color: white;
+            a{
+                color: $main-cyan-color;
+                text-transform: uppercase;
             }
         }
     }

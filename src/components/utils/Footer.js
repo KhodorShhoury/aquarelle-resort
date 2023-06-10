@@ -21,6 +21,7 @@ function Footer() {
             <a href="https://www.tiktok.com/@aquarelleresort?_t=8cN4vlVosd8&_r=1"><FontAwesomeIcon icon={faTiktok} /></a>
           </div>
         </div>
+        <div className="made-by">Made By <a href="https://www.facebook.com/mediaology1">mediaology</a></div>
       </div>
     </div>
   )
